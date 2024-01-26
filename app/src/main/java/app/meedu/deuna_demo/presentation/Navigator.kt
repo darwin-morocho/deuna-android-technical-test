@@ -47,7 +47,7 @@ fun Navigator(content: @Composable () -> Unit) {
   val authRepository = AuthRepositoryImp(
     keyStore = keyStore,
     httpClient = httpClient,
-    apiKey = BuildConfig.API_KEY
+    apiKey = BuildConfig.PRIVATE_API_KEY
   )
 
   CompositionLocalProvider(
