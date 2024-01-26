@@ -24,9 +24,11 @@ fun BuyButton() {
   val navController = LocalNavController.current
   var navigateToThankYou by remember { mutableStateOf(false) }
 
+  val coroutineScope = rememberCoroutineScope()
+
   fun onClick() {
 
-    CoroutineScope(Dispatchers.IO).launch {
+    coroutineScope.launch(Dispatchers.IO) {
       val result = merchantsRepository.getOrderToken(
         productId = "FakeID",
         productName = "Fake Product",

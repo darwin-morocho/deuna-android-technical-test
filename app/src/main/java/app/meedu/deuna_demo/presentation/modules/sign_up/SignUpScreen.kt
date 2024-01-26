@@ -57,10 +57,7 @@ fun SignUpScreen() {
     ) {
       Scaffold {
         Column(
-          modifier = Modifier
-            .padding(
-              horizontal = 20.dp, vertical = 30.dp
-            ),
+          modifier = Modifier.padding(horizontal = 20.dp, vertical = 30.dp),
           verticalArrangement = Arrangement.Bottom,
         ) {
 
@@ -70,9 +67,7 @@ fun SignUpScreen() {
             keyboardOptions = KeyboardOptions(
               keyboardType = KeyboardType.Email
             ),
-            onValueChange = {
-              signInViewModel.onEmailChanged(it)
-            },
+            onValueChange = signInViewModel::onEmailChanged,
             label = {
               Text(text = "Email")
             },
@@ -86,9 +81,7 @@ fun SignUpScreen() {
             keyboardOptions = KeyboardOptions(
               keyboardType = KeyboardType.Text
             ),
-            onValueChange = {
-              signInViewModel.onFirstNameChanged(it)
-            },
+            onValueChange = signInViewModel::onFirstNameChanged,
             label = {
               Text(text = "Nombre")
             },
@@ -102,9 +95,7 @@ fun SignUpScreen() {
             keyboardOptions = KeyboardOptions(
               keyboardType = KeyboardType.Text
             ),
-            onValueChange = {
-              signInViewModel.onLastNameChanged(it)
-            },
+            onValueChange = signInViewModel::onLastNameChanged,
             label = {
               Text(text = "Apellido")
             },
@@ -118,9 +109,7 @@ fun SignUpScreen() {
             keyboardOptions = KeyboardOptions(
               keyboardType = KeyboardType.Phone
             ),
-            onValueChange = {
-              signInViewModel.onPhoneChanged(it)
-            },
+            onValueChange = signInViewModel::onPhoneChanged,
             label = {
               Text(text = "Celular")
             },
