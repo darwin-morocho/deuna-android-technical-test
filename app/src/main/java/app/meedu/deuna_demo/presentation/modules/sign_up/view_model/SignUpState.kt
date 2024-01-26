@@ -1,7 +1,7 @@
 package app.meedu.deuna_demo.presentation.modules.sign_up.view_model
 
 class SignUpState(
-  val email: String = "test@test.com",
+  val email: String = "unique_email@test.com",
   val firstName: String = "Test",
   val lastName: String = "User",
   val phone: String = "098787765",
