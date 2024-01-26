@@ -1,6 +1,8 @@
 
 # Android App
 
+Tested on an emulator with Android API 33
+
 ## Registration Module
 The user registration module is located at `app/src/main/java/app.meedu.deuna_demo/presentation/modules/sign_up`.
 
